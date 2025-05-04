@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Completed Surveys</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #a855f7;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .survey-list {
+      max-width: 800px;
+      margin: auto;
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px #a855f7aa;
+    }
+
+    .survey-item {
+      background-color: #2c2c2c;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      text-align: left;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .survey-item:hover {
+      background-color: #444;
+    }
+
+    .survey-item h3 {
+      color: #00ffcc;
+      margin-bottom: 0.5rem;
+    }
+
+    .survey-item p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    .back-btn {
+  background-color: #a855f7;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 2rem auto 0;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+
+    .back-btn:hover {
+      background-color: #9333ea;
+    }
+  </style>
+</head>
+<body>
+  <h1>Completed Surveys</h1>
+  <div class="survey-list">
+    <div class="survey-item">
+      <h3>Tvisha Bansal</h3>
+      <p>Date: April 5, 2025</p>
+      <p>Status: Completed | Score: Analyzing...</p>
+    </div>
+    <div class="survey-item">
+      <h3>John Doe</h3>
+      <p>Date: March 29, 2025</p>
+      <p>Status: Completed | Score: Empathetic Idealist</p>
+    </div>
+    <div class="survey-item">
+      <h3>Aisha Khan</h3>
+      <p>Date: March 20, 2025</p>
+      <p>Status: Completed | Score: Realist Visionary</p>
+    </div>
+    <!-- More survey items can go here -->
+  </div>
+
+  <button class="back-btn" onclick="goBack()">Back to Survey</button>
+
+  <script>
+    function goBack() {
+      window.location.href = "surveys.html"; // Update with your survey page filename
+    }
+  </script>
+</body>
+</html>
