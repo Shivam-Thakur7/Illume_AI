@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Illume AI | Surveys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0e0e0e;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    p.subtitle {
+      color: #a0a0a0;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .survey-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 900px;
+      width: 100%;
+    }
+    .card {
+      background: linear-gradient(135deg, #1f1f1f, #2d2d2d);
+      padding: 1.5rem;
+      border-radius: 15px;
+      transition: transform 0.3s ease, background 0.3s ease;
+      border: 1px solid #2f2f2f;
+      position: relative;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      background: linear-gradient(135deg, #292929, #383838);
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      color: #b0b0b0;
+    }
+    .arrow {
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: #bbb;
+    }
+    @media (max-width: 768px) {
+      .survey-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Surveys</h1>
+  <p class="subtitle">Share thoughts to help us explore the intersection of personality and aesthetics.</p>
+
+  <div class="survey-grid">
+    <div class="card" onclick="window.location.href='demographic.html'">
+      <h3>🗂️ Demographic Survey</h3>
+      <p>Tell us a little about yourself.</p>
+      <span class="arrow">→</span>
+    </div>
+    <div class="card" onclick="window.location.href='personality.html'">
+      <h3>🧠 Multiple Measures of Personality</h3>
+      <p>200+ personality scores from 181 questions!</p>
+      <span class="arrow">→</span>
+    </div>
+    <div class="card" onclick="window.location.href='values.html'">
+      <h3>💭 Personal Values and Beliefs</h3>
+      <p>A survey of basic human values and primal world beliefs.</p>
+      <span class="arrow">→</span>
+    </div>
+    <div class="card" onclick="window.location.href='completed.html'">
+      <h3>📊 View Completed Surveys</h3>
+      <p>See the results of previously completed personality tests and surveys.</p>
+      <span class="arrow">→</span>
+    </div>
+  </div>
+</body>
+</html>

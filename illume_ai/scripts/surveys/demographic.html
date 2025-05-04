@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Illume AI - Demographics Survey</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, #d946ef, #8b5cf6, #0ea5e9);
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      color: #d8b4fe;
+    }
+
+    label {
+      display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: 600;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #444;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #111;
+      color: #fff;
+    }
+
+    button {
+      background: linear-gradient(135deg, #d946ef, #8b5cf6, #0ea5e9);
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .counter {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: #8b5cf6;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>Demographic Survey - Illume AI</header>
+  <div class="counter" id="counter">Answered: 0 / 28</div>
+  <div class="container">
+    <form id="surveyForm">
+      <h2>Section 1 — Age and Culture</h2>
+      <label>When were you born?</label>
+      <input type="text" name="birthYear">
+
+      <label>What month were you born?</label>
+      <input type="text" name="birthMonth">
+
+      <label>Where were you born?</label>
+      <input type="text" name="birthCountry">
+
+      <label>Where do you currently live?</label>
+      <input type="text" name="currentCountry">
+
+      <label>How well do you read & write in English?</label>
+      <input type="text" name="englishFluency">
+
+      <label>What are your ethnic origins or ancestry?</label>
+      <textarea name="ethnicOrigins"></textarea>
+
+      <h2>Section 2 — Education and Occupation</h2>
+      <label>How much education have you completed?</label>
+      <input type="text" name="education">
+
+      <label>What was your major field of study?</label>
+      <textarea name="studyField"></textarea>
+
+      <label>What field do you work in currently?</label>
+      <input type="text" name="workField">
+
+      <label>Have you ever worked professionally in art, design, or visual media?</label>
+      <input type="text" name="artExperience">
+
+      <label>If yes, for how long?</label>
+      <input type="text" name="artDuration">
+
+      <label>Art/design/media areas worked in?</label>
+      <textarea name="artAreas"></textarea>
+
+      <label>How would you rate your artistic knowledge?</label>
+      <input type="text" name="artKnowledge">
+
+      <label>How much do you use Illume AI for work?</label>
+      <input type="text" name="illumeaiUse">
+
+      <h2>Section 3 — Religion and Spirituality</h2>
+      <label>Religion you were raised in?</label>
+      <input type="text" name="raisedReligion">
+
+      <label>Current religion?</label>
+      <input type="text" name="currentReligion">
+
+      <label>Importance of religion/spirituality in life?</label>
+      <input type="text" name="religionImportance">
+
+      <h2>Section 4 — Gender and Sexuality</h2>
+      <label>Gender identity?</label>
+      <input type="text" name="gender">
+
+      <label>Sexual orientation?</label>
+      <input type="text" name="orientation">
+
+      <label>How masculine/feminine do you view yourself?</label>
+      <input type="text" name="genderExpression">
+
+      <label>Do you identify as transgender?</label>
+      <input type="text" name="transgender">
+
+      <h2>Section 5 — Lifestyle and Other</h2>
+      <label>Weekday time outdoors?</label>
+      <input type="text" name="outdoorsTime">
+
+      <label>How often do you exercise?</label>
+      <input type="text" name="exercise">
+
+      <label>Quality of sleep?</label>
+      <input type="text" name="sleep">
+
+      <label>Height?</label>
+      <input type="text" name="height">
+
+      <label>Weight?</label>
+      <input type="text" name="weight">
+
+      <label>General health?</label>
+      <input type="text" name="health">
+
+      <label>Color vision deficiency?</label>
+      <input type="text" name="colorVision">
+
+      <label>Visual imagery vividness?</label>
+      <input type="text" name="visualImagery">
+
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('surveyForm');
+    const counter = document.getElementById('counter');
+
+    form.addEventListener('input', () => {
+      const inputs = Array.from(form.querySelectorAll('input, textarea'));
+      const filled = inputs.filter(input => input.value.trim() !== '').length;
+      counter.textContent = `Answered: ${filled} / 28`;
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for participating!');
+    });
+  </script>
+</body>
+
+</html>
